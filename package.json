@@ -1,0 +1,44 @@
+{
+    "name": "minimalist-frontend-library",
+    "version": "0.1.6",
+    "description": "Minimalist frontend library baseline",
+    "repository": "https://github.com/danalizieors/minimalist-frontend-library",
+    "author": "Danalizi-Erőss Örs <danalizieors@gmail.com>",
+    "license": "MIT",
+    "source": "source/index.ts",
+    "main": "build/index.js",
+    "module": "build/index.module.js",
+    "exports": "./build/index.modern.js",
+    "unpkg": "build/index.umd.js",
+    "types": "build/index.d.ts",
+    "files": [
+        "**"
+    ],
+    "sideEffects": false,
+    "scripts": {
+        "format": "prettier --write .",
+        "verify:compile": "tsc",
+        "verify:format": "prettier --check .",
+        "verify:test": "yarn test",
+        "verify": "run-s verify:*",
+        "test": "jest --config .jestrc.json --passWithNoTests",
+        "manual": "parcel source/manual.html --cache-dir build/cache --out-dir build/manual",
+        "start": "microbundle watch",
+        "build": "microbundle",
+        "clean": "rm -rf build",
+        "prepublish": "yarn build"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@types/jest": "^26.0.22",
+        "husky": "^4.3.8",
+        "jest": "^26.6.3",
+        "microbundle": "^0.13.0",
+        "npm-run-all": "^4.1.5",
+        "parcel-bundler": "^1.12.5",
+        "prettier": "^2.2.1",
+        "prettier-plugin-organize-imports": "^1.1.1",
+        "ts-jest": "^26.5.4",
+        "typescript": "^4.2.3"
+    }
+}
