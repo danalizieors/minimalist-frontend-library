@@ -22,7 +22,7 @@
         "verify:test": "yarn test",
         "verify": "run-s verify:*",
         "test": "jest --config .jestrc.json --passWithNoTests",
-        "manual": "parcel source/manual.html --cache-dir build/cache --out-dir build/manual",
+        "manual": "parcel manual/index.html --cache-dir build/cache --out-dir build/manual",
         "start": "microbundle watch",
         "build": "microbundle",
         "clean": "rm -rf build",
